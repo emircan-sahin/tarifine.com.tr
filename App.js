@@ -12,6 +12,7 @@ const App = () => {
         <Text className='text-center'>Get Started</Text>
       </TouchableOpacity>
     </View>
+    
   );
 }
 
