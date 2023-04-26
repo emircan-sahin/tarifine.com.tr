@@ -1,17 +1,22 @@
-// import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { OnboardingScreen } from './screens/OnboardingScreen';
+import { StatusBar } from 'expo-status-bar';
+import { LoginScreen } from './screens/LoginScreen';
+import { RegisterScreen } from './screens/RegisterScreen';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View className='flex-1 items-center justify-center bg-[#0A0A0A]'>
-      <Image source={require('./assets/images/Onboarding.png')} className='w-full h-[60%]' />
-      <Text className='text-white text-2xl mt-8'>Start Cooking</Text>
-      <Text className='text-[#9FA5C0] text-base w-5/12 text-center mt-4'>Let’s join our community to cook better food!</Text>
-
-      <TouchableOpacity className='w-10/12 mx-auto py-4 bg-[#1FCC79] mt-8 rounded-full'>
-        <Text className='text-center font-bold'>Get Started</Text>
-      </TouchableOpacity>
-    </View>
+    <NavigationContainer>
+      <StatusBar style='light' />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Onboarding" component={OnboardingScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
