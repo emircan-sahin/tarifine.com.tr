@@ -1,11 +1,9 @@
-import { ScrollView, StyleSheet, View } from "react-native"
-import { FoodCard } from "./FoodCard"
-import { useEffect } from "react";
-import react from "react";
+import { ScrollView, StyleSheet, View } from "react-native";
+import { FoodCard } from "./FoodCard";
 
-export const FoodCards = ({ food, onPress }) => {
+export const FoodCards = ({ foods }) => {
     return (
-        <ScrollView contentContainerStyle={styles.scrollView}>
+        <ScrollView className='-z-10' contentContainerStyle={styles.scrollView}>
             <FoodCard />
             <FoodCard />
             <FoodCard />

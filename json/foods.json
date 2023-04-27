@@ -1,0 +1,9 @@
+[
+    {
+        "id": 0,
+        "name": "Black Forest Cake",
+        "image": "images/blackforest.jpg",
+        "category": "Food",
+        "duration": 60
+    }
+]
